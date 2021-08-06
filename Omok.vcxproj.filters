@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Util">
+      <UniqueIdentifier>{bace2996-298f-4ecf-9af3-b20280aa5845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Omok">
+      <UniqueIdentifier>{387bb7ca-5d22-419a-ad6c-dff8d1f232d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{6e882e11-502f-4ce2-a509-a0aa5ffb01b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Resource">
+      <UniqueIdentifier>{4f6ef9ca-767c-4c04-8922-743af8d3f88c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDraw">
+      <UniqueIdentifier>{6cc1fe26-e07f-4807-9773-60f170cf12d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\framework.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Resource.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SafeDelete.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DDraw\DDraw.h">
+      <Filter>DDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\Game.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\Board.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\eColor.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Vector2.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\Menu.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\eButtonType.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\MouseEvent.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\BoardAnalyzer.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\eDirection.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\Button.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\AI.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+    <ClInclude Include="Omok\Move.h">
+      <Filter>Omok</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DDraw\DDraw.cpp">
+      <Filter>DDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\Game.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\Board.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\Menu.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\MouseEvent.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\BoardAnalyzer.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\Button.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+    <ClCompile Include="Omok\AI.cpp">
+      <Filter>Omok</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Main\Resource\Omok.ico">
+      <Filter>Main\Resource</Filter>
+    </Image>
+    <Image Include="Main\Resource\small.ico">
+      <Filter>Main\Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Main\Resource\Omok.rc">
+      <Filter>Main\Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
