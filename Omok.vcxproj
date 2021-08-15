@@ -19,35 +19,36 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DDraw\DDraw.cpp" />
+    <ClCompile Include="Game\Board.cpp" />
+    <ClCompile Include="Game\BoardAnalyzer.cpp" />
+    <ClCompile Include="Game\Button.cpp" />
+    <ClCompile Include="Game\eDirection.cpp" />
+    <ClCompile Include="Game\eSpotInfo.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Game\Menu.cpp" />
+    <ClCompile Include="Main\Main.cpp" />
+    <ClCompile Include="Util\Event.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="DDraw\DDraw.h" />
+    <ClInclude Include="Game\Board.h" />
+    <ClInclude Include="Game\BoardAnalyzer.h" />
+    <ClInclude Include="Game\Button.h" />
+    <ClInclude Include="Game\eButtonType.h" />
+    <ClInclude Include="Game\eColor.h" />
+    <ClInclude Include="Game\eDirection.h" />
+    <ClInclude Include="Game\eSpotInfo.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Game\Menu.h" />
+    <ClInclude Include="Game\Move.h" />
+    <ClInclude Include="Game\Vector2.h" />
     <ClInclude Include="Main\framework.h" />
     <ClInclude Include="Main\Main.h" />
     <ClInclude Include="Main\Resource.h" />
     <ClInclude Include="Main\targetver.h" />
-    <ClInclude Include="Omok\AI.h" />
-    <ClInclude Include="Omok\Board.h" />
-    <ClInclude Include="Omok\BoardAnalyzer.h" />
-    <ClInclude Include="Omok\Button.h" />
-    <ClInclude Include="Omok\eButtonType.h" />
-    <ClInclude Include="Omok\eColor.h" />
-    <ClInclude Include="Omok\eDirection.h" />
-    <ClInclude Include="Omok\Game.h" />
-    <ClInclude Include="Omok\Menu.h" />
-    <ClInclude Include="Omok\Move.h" />
-    <ClInclude Include="Util\MouseEvent.h" />
+    <ClInclude Include="Util\Event.h" />
     <ClInclude Include="Util\SafeDelete.h" />
-    <ClInclude Include="Util\Vector2.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="DDraw\DDraw.cpp" />
-    <ClCompile Include="Main\Main.cpp" />
-    <ClCompile Include="Omok\AI.cpp" />
-    <ClCompile Include="Omok\Board.cpp" />
-    <ClCompile Include="Omok\BoardAnalyzer.cpp" />
-    <ClCompile Include="Omok\Button.cpp" />
-    <ClCompile Include="Omok\Game.cpp" />
-    <ClCompile Include="Omok\Menu.cpp" />
-    <ClCompile Include="Util\MouseEvent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Main\Resource\Omok.ico" />

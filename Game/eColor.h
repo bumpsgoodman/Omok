@@ -3,6 +3,6 @@
 enum class eColor
 {
     None,
+    Black,
     White,
-    Black
 };

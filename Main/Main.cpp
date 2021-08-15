@@ -4,8 +4,8 @@
 #include "framework.h"
 #include "Main.h"
 
-#include "../Omok/Game.h"
-#include "../Util/MouseEvent.h"
+#include "../Game/Game.h"
+#include "../Util/Event.h"
 
 #define MAX_LOADSTRING 100
 
@@ -49,8 +49,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg = {};
 
-    g_Game = new Game;
-    if (!g_Game->Initailize(g_hWnd))
+    gGame = new Game;
+    if (!gGame->Initialize(g_hWnd))
     {
         goto exit;
     }
@@ -73,12 +73,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
         else
         {
-            g_Game->Process();
+            gGame->Process();
         }
     }
 
 exit:
-    delete g_Game;
+    delete gGame;
     return (int) msg.wParam;
 }
 
@@ -186,19 +186,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
         size_t x = GET_X_LPARAM(lParam);
         size_t y = GET_Y_LPARAM(lParam);
-        MouseEvent::OnClick(x, y);
+        event::mouse::OnClick(x, y);
         break;
     }
-    case WM_SIZE:
-        if (g_Game)
-        {
-            g_Game->UpdateWindowSize();
-        }
-        break;
     case WM_MOVE:
-        if (g_Game)
+        if (gGame)
         {
-            g_Game->UpdateWindowPos();
+            gGame->UpdateWindowPos();
         }
         break;
     default:

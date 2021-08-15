@@ -1,16 +1,17 @@
 #include <assert.h>
+#include <cstdint>
 
 #include "Button.h"
-#include "../Util/MouseEvent.h"
+#include "../Util/Event.h"
 
-Button::Button(DDraw* ddraw, const int x, const int y, const size_t width, const size_t height, const wchar_t* text, const eButtonType type)
+Button::Button(DDraw* ddraw, const uint32_t x, const uint32_t y, const uint32_t width, const uint32_t height, const eButtonType type, const wchar_t* const text)
     : mDDraw(ddraw)
     , mX(x)
     , mY(y)
     , mWidth(width)
     , mHeight(height)
-    , mText(text)
     , mType(type)
+    , mText(text)
 {
     assert(mDDraw != nullptr);
 
@@ -29,14 +30,14 @@ void Button::Draw() const
     HDC hdc;
     mDDraw->BeginGDI(&hdc);
 
-    HFONT oldFont = (HFONT)SelectObject(hdc, mDefaultFont);
+    const HFONT oldFont = (HFONT)SelectObject(hdc, mDefaultFont);
 
-    size_t textLen = lstrlen(mText);
+    const uint32_t textLen = lstrlen(mText);
     SIZE textSize;
     GetTextExtentPoint32(hdc, mText, textLen, &textSize);
 
-    int textX = mX + (mWidth / 2) - textSize.cx / 2;
-    int textY = mY + (mHeight / 2) - textSize.cy / 2;
+    const uint32_t textX = mX + (mWidth / 2) - textSize.cx / 2;
+    const uint32_t textY = mY + (mHeight / 2) - textSize.cy / 2;
 
     mDDraw->DrawRectangle(mX, mY, mWidth, mHeight, mColor);
     mDDraw->PrintText(hdc, mText, textX, textY, textLen, mTextColor);
@@ -48,14 +49,13 @@ void Button::Draw() const
 
 bool Button::IsPressed() const
 {
-    size_t x = MouseEvent::GetX();
-    size_t y = MouseEvent::GetY();
-
-    if ((int)x >= mX && (int)x <= mX + mWidth
-        && (int)y >= mY && (int)y <= mY + mHeight)
+    const uint32_t x = event::mouse::GetX();
+    const uint32_t y = event::mouse::GetY();
+    if (x >= mX && x <= mX + mWidth
+        && y >= mY && y <= mY + mHeight)
     {
         return true;
     }
-    
+
     return false;
 }

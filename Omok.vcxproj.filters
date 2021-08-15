@@ -1,23 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Util">
-      <UniqueIdentifier>{bace2996-298f-4ecf-9af3-b20280aa5845}</UniqueIdentifier>
+    <Filter Include="DDraw">
+      <UniqueIdentifier>{b9b0f8eb-24d3-477e-ab50-812be7b00a62}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Omok">
-      <UniqueIdentifier>{387bb7ca-5d22-419a-ad6c-dff8d1f232d3}</UniqueIdentifier>
+    <Filter Include="Game">
+      <UniqueIdentifier>{9543120d-bc36-4600-aadc-18b2b70faab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{81720afc-38df-405c-b423-f81c42327b82}</UniqueIdentifier>
     </Filter>
     <Filter Include="Main">
-      <UniqueIdentifier>{6e882e11-502f-4ce2-a509-a0aa5ffb01b4}</UniqueIdentifier>
+      <UniqueIdentifier>{5ed8786c-2e0a-48ec-b7ee-a0fd103d417a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Main\Resource">
-      <UniqueIdentifier>{4f6ef9ca-767c-4c04-8922-743af8d3f88c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DDraw">
-      <UniqueIdentifier>{6cc1fe26-e07f-4807-9773-60f170cf12d8}</UniqueIdentifier>
+      <UniqueIdentifier>{a7f3e483-7a07-43aa-befd-4da54a151d34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DDraw\DDraw.cpp">
+      <Filter>DDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Board.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BoardAnalyzer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Button.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\eDirection.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\eSpotInfo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Menu.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Event.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DDraw\DDraw.h">
+      <Filter>DDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Board.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BoardAnalyzer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Button.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\eButtonType.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\eColor.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\eDirection.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\eSpotInfo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Menu.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Move.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Vector2.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Event.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SafeDelete.h">
+      <Filter>Util</Filter>
+    </ClInclude>
     <ClInclude Include="Main\framework.h">
       <Filter>Main</Filter>
     </ClInclude>
@@ -30,77 +104,6 @@
     <ClInclude Include="Main\targetver.h">
       <Filter>Main</Filter>
     </ClInclude>
-    <ClInclude Include="Util\SafeDelete.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="DDraw\DDraw.h">
-      <Filter>DDraw</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\Game.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\Board.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\eColor.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\Vector2.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\Menu.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\eButtonType.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Util\MouseEvent.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\BoardAnalyzer.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\eDirection.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\Button.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\AI.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-    <ClInclude Include="Omok\Move.h">
-      <Filter>Omok</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Main\Main.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
-    <ClCompile Include="DDraw\DDraw.cpp">
-      <Filter>DDraw</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\Game.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\Board.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\Menu.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
-    <ClCompile Include="Util\MouseEvent.cpp">
-      <Filter>Util</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\BoardAnalyzer.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\Button.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
-    <ClCompile Include="Omok\AI.cpp">
-      <Filter>Omok</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Main\Resource\Omok.ico">
