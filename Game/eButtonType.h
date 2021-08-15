@@ -9,5 +9,9 @@ enum class eButtonType
     Redo,
 
     SaveNotation,
-    LoadNotation
+    LoadNotation,
+
+    SpotInfoOff,
+    SpotInfoBlack,
+    SpotInfoWhite,
 };

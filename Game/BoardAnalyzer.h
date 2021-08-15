@@ -19,7 +19,6 @@ public:
     bool IsOverLines(const Vector2& pos) const;
     bool IsFourAndFour(const Vector2& pos) const;
     bool IsThreeAndThree(const Vector2& pos) const;
-    bool IsPreFourAndFour(const Vector2& pos) const;
 
 private:
     eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]);

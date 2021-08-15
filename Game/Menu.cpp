@@ -26,6 +26,9 @@ Menu::Menu(DDraw* ddraw)
     AddButton(0, 0, eButtonType::Clear, L"Clear");
     AddButton(1, 0, eButtonType::SaveNotation, L"Save Notation");
     AddButton(1, 1, eButtonType::LoadNotation, L"Load Notation");
+    AddButton(BUTTON_ROW_NUMS - 3, 0, eButtonType::SpotInfoOff, L"SpotInfo(Off)");
+    AddButton(BUTTON_ROW_NUMS - 2, 0, eButtonType::SpotInfoBlack, L"SpotInfo(B)");
+    AddButton(BUTTON_ROW_NUMS - 2, 1, eButtonType::SpotInfoWhite, L"SpotInfo(W)");
     AddButton(BUTTON_ROW_NUMS - 1, 0, eButtonType::Undo, L"Undo");
     AddButton(BUTTON_ROW_NUMS - 1, 1, eButtonType::Redo, L"Redo");
 }
