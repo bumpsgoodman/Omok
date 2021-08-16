@@ -31,8 +31,9 @@ private:
     void updateSpotInfoRecursive(const Vector2& pos, eColor(*board)[Board::COLS]);
     void updateIllegalMoveVect(const Vector2& pos);
     void removePosFromIllegalMove(const Vector2& pos);
+    void addSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
     
-    eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]);
+    eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]) const;
     Vector2 getEmptyPos(const Vector2& pos, const int32_t dx, const int32_t dy, const eColor(*board)[Board::COLS]) const;
     void recheckThreeAndThree(const Vector2& pos, eColor(*board)[Board::COLS]);
 
