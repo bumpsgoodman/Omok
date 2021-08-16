@@ -23,10 +23,6 @@ public:
     const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
     const std::vector<Vector2> GetThreeAndThreeVect() const { return mThreeAndThreeVect; }
 
-    bool IsOverLines(const Vector2& pos) const;
-    bool IsFourAndFour(const Vector2& pos) const;
-    bool IsThreeAndThree(const Vector2& pos) const;
-
     const std::vector<Vector2>& GetSpotInfoVect(const uint32_t spotInfoHash) const { return mSpotInfoVectMap.at(spotInfoHash); }
 
 private:
@@ -38,6 +34,10 @@ private:
     
     eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]) const;
     Vector2 getEmptyPos(const Vector2& pos, const int32_t dx, const int32_t dy, const eColor(*board)[Board::COLS]) const;
+
+    bool isOverLines(const Vector2& pos) const;
+    bool isFourAndFour(const Vector2& pos) const;
+    bool isThreeAndThree(const Vector2& pos) const;
     void recheckThreeAndThree(const Vector2& pos, eColor(*board)[Board::COLS]);
 
 private:

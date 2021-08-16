@@ -135,7 +135,6 @@ bool DDraw::BeginDraw()
     hr = mBack->Lock(nullptr, &ddsd, DDLOCK_WAIT | DDLOCK_WRITEONLY, nullptr);
     if (FAILED(hr))
     {
-        assert(false);
         goto EXIT;
     }
     
