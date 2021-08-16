@@ -27,11 +27,14 @@ public:
     bool IsFourAndFour(const Vector2& pos) const;
     bool IsThreeAndThree(const Vector2& pos) const;
 
+    const std::vector<Vector2>& GetSpotInfoVect(const uint32_t spotInfoHash) const { return mSpotInfoVectMap.at(spotInfoHash); }
+
 private:
     void updateSpotInfoRecursive(const Vector2& pos, eColor(*board)[Board::COLS]);
     void updateIllegalMoveVect(const Vector2& pos);
     void removePosFromIllegalMove(const Vector2& pos);
     void addSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
+    void removeSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
     
     eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]) const;
     Vector2 getEmptyPos(const Vector2& pos, const int32_t dx, const int32_t dy, const eColor(*board)[Board::COLS]) const;
@@ -50,5 +53,5 @@ private:
 
     // key: eSpotInfo의 해시 (GetSpotInfoHash() 함수를 통해 반환된 해시)
     // value: eSpotInfo에 해당하는 위치들이 저장된 vector
-    std::unordered_map<uint32_t, std::vector<Vector2>> mSpotInfoMap;
+    std::unordered_map<uint32_t, std::vector<Vector2>> mSpotInfoVectMap;
 };
