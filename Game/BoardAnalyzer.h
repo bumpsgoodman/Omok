@@ -39,6 +39,7 @@ private:
     bool isFourAndFour(const Vector2& pos) const;
     bool isThreeAndThree(const Vector2& pos) const;
     void recheckThreeAndThree(const Vector2& pos, eColor(*board)[Board::COLS]);
+    bool isClosed(const Vector2& frontPos, const Vector2& backPos, const eDirection direction, eColor(*board)[Board::COLS]);
 
 private:
     Board* mBoard;
