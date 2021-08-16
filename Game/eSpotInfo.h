@@ -21,3 +21,4 @@ enum class eSpotInfo
 };
 
 bool IsOpen(const eSpotInfo spotInfo);
+uint32_t GetSpotInfoHash(const eSpotInfo spotInfo);
