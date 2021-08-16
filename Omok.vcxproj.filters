@@ -48,6 +48,9 @@
     <ClCompile Include="Main\Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Goosebumps.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DDraw\DDraw.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Main\targetver.h">
       <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Goosebumps.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

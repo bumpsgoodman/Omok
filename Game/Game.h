@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Board.h"
+#include "Goosebumps.h"
 #include "Menu.h"
 #include "../DDraw/DDraw.h"
 
@@ -37,8 +38,10 @@ private:
     Menu* mMenu = nullptr;
 
     eColor mPlayerColor = eColor::Black;
-    eColor mAiColor = eColor::White;
+    eColor mGoosebumpsColor = eColor::White;
     eColor mCurTurn = eColor::Black;
+
+    Goosebumps* mGoosebumps = nullptr;
 };
 
 extern Game* gGame;

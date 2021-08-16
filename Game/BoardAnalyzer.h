@@ -12,7 +12,7 @@ class BoardAnalyzer final
 public:
     BoardAnalyzer(Board* board, const eColor color);
     BoardAnalyzer(const BoardAnalyzer&) = default;
-    ~BoardAnalyzer();
+    ~BoardAnalyzer() = default;
 
     void Clear();
     void Update(const Vector2& pos);
@@ -23,7 +23,7 @@ public:
     const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
     const std::vector<Vector2> GetThreeAndThreeVect() const { return mThreeAndThreeVect; }
 
-    const std::vector<Vector2>& GetSpotInfoVect(const uint32_t spotInfoHash) const { return mSpotInfoVectMap.at(spotInfoHash); }
+    const std::vector<Vector2>& GetSpotInfoVect(const eSpotInfo spotInfo) const { return mSpotInfoVectMap.at(GetSpotInfoHash(spotInfo)); }
 
 private:
     void updateSpotInfoRecursive(const Vector2& pos, eColor(*board)[Board::COLS]);
@@ -39,7 +39,7 @@ private:
     bool isFourAndFour(const Vector2& pos) const;
     bool isThreeAndThree(const Vector2& pos) const;
     void recheckThreeAndThree(const Vector2& pos, eColor(*board)[Board::COLS]);
-    bool isClosed(const Vector2& frontPos, const Vector2& backPos, const eDirection direction, eColor(*board)[Board::COLS]);
+    bool isClosedSpot(const Vector2& frontPos, const Vector2& backPos, const eDirection direction, eColor(*board)[Board::COLS]);
 
 private:
     Board* mBoard;
