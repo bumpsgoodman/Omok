@@ -8,7 +8,7 @@ enum class eColor;
 struct Move;
 struct Vector2;
 
-class Goosebumps
+class Goosebumps final
 {
 public:
     Goosebumps(Board* board, const eColor color);
