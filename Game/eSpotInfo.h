@@ -5,19 +5,17 @@ enum class eSpotInfo
     // ¹«ÀÇ¹ÌÇÑ ¼ö
     None,
 
-    // ¿­¸°
+    Closed1,
     Open1,
+    Closed2,
     Open2,
+    Closed3,
     Open3,
+    Closed4,
     Open4,
+
     Open5,
     Open6,
-
-    // ´ÝÈù
-    Closed1,
-    Closed2,
-    Closed3,
-    Closed4,
 };
 
 bool IsOpen(const eSpotInfo spotInfo);
