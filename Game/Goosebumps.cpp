@@ -6,7 +6,6 @@
 #include "Board.h"
 #include "BoardAnalyzer.h"
 #include "Goosebumps.h"
-#include "Move.h"
 
 Goosebumps::Goosebumps(Board* board, const eColor color)
     : mBoard(board)
@@ -21,9 +20,9 @@ Goosebumps::Goosebumps(Board* board, const eColor color)
     mOpponentAnalyzer = board->GetAnalyzer(mOpponentColor);
 }
 
-Move Goosebumps::GetBestMove()
+Vector2 Goosebumps::GetBestMovePos()
 {
-    Move move = getForcedMove();
+    Vector2 move = getForcedMovePos();
     if (mBoard->IsPlaceable(move))
     {
         goto EXIT;
@@ -34,9 +33,9 @@ EXIT:
 }
 
 // 강제 수가 없다면 올바르지 않은 수 반환
-Move Goosebumps::getForcedMove() const
+Vector2 Goosebumps::getForcedMovePos() const
 {
-    Move move = { { UINT32_MAX, UINT32_MAX }, mColor };
+    Vector2 result = { UINT32_MAX, UINT32_MAX };
 
     const std::vector<Vector2>& overLineVect = mAnalyzer->GetOverLineVect();
     const std::vector<Vector2>& fourAndFourVect = mAnalyzer->GetFourAndFourVect();
@@ -52,7 +51,7 @@ Move Goosebumps::getForcedMove() const
     {
         if (open5Vect.size() > 0)
         {
-            move.Pos = open5Vect.back();
+            result = open5Vect.back();
             goto EXIT;
         }
 
@@ -60,7 +59,7 @@ Move Goosebumps::getForcedMove() const
         {
             if (overLineVect.size() > 0)
             {
-                move.Pos = overLineVect.back();
+                result = overLineVect.back();
                 goto EXIT;
             }
         }
@@ -70,7 +69,7 @@ Move Goosebumps::getForcedMove() const
     {
         if (opponentOpen5Vect.size() > 0)
         {
-            move.Pos = opponentOpen5Vect.back();
+            result = opponentOpen5Vect.back();
             goto EXIT;
         }
 
@@ -78,7 +77,7 @@ Move Goosebumps::getForcedMove() const
         {
             if (opponentOverLineVect.size() > 0)
             {
-                move.Pos = opponentOverLineVect.back();
+                result = opponentOverLineVect.back();
                 goto EXIT;
             }
         }
@@ -105,14 +104,14 @@ Move Goosebumps::getForcedMove() const
 
                     if (!bIllegal)
                     {
-                        move.Pos = opponentOpen4Vect.back();
+                        result = opponentOpen4Vect.back();
                         goto EXIT;
                     }
                 }
             }
             else
             {
-                move.Pos = opponentOpen4Vect.back();
+                result = opponentOpen4Vect.back();
                 goto EXIT;
             }
         }
@@ -139,21 +138,21 @@ Move Goosebumps::getForcedMove() const
 
                     if (!bIllegal)
                     {
-                        move.Pos = open4Vect.back();
+                        result = open4Vect.back();
                         goto EXIT;
                     }
                 }
             }
             else
             {
-                move.Pos = open4Vect.back();
+                result = open4Vect.back();
                 goto EXIT;
             }
         }
     }
 
 EXIT:
-    return move;
+    return result;
 }
 
 std::vector<Vector2> Goosebumps::getRootPosVect(const uint32_t maxSize) const

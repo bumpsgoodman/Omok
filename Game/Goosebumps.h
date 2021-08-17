@@ -5,7 +5,6 @@
 class Board;
 class BoardAnalyzer;
 enum class eColor;
-struct Move;
 struct Vector2;
 
 class Goosebumps final
@@ -15,10 +14,10 @@ public:
     Goosebumps(const Goosebumps&) = delete;
     ~Goosebumps() = default;
 
-    Move GetBestMove();
+    Vector2 GetBestMovePos();
 
 private:
-    Move getForcedMove() const;
+    Vector2 getForcedMovePos() const;
     std::vector<Vector2> getRootPosVect(const uint32_t maxSize) const;
 
 private:

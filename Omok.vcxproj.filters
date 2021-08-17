@@ -83,9 +83,6 @@
     <ClInclude Include="Game\Menu.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Move.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Vector2.h">
       <Filter>Game</Filter>
     </ClInclude>

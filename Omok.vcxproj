@@ -43,7 +43,6 @@
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Goosebumps.h" />
     <ClInclude Include="Game\Menu.h" />
-    <ClInclude Include="Game\Move.h" />
     <ClInclude Include="Game\Vector2.h" />
     <ClInclude Include="Main\framework.h" />
     <ClInclude Include="Main\Main.h" />

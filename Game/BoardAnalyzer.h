@@ -4,7 +4,6 @@
 #include <vector>
 
 #include "Board.h"
-#include "eDirection.h"
 #include "eSpotInfo.h"
 
 class BoardAnalyzer final

@@ -22,8 +22,6 @@ private:
     void update();
     void draw() const;
 
-    void changeTurn();
-
 private:
     static constexpr uint32_t FPS = 60;
     static constexpr float TICKS_PER_FRAME = 1000.0f / (float)FPS;
@@ -38,10 +36,10 @@ private:
     Menu* mMenu = nullptr;
 
     eColor mPlayerColor = eColor::Black;
-    eColor mGoosebumpsColor = eColor::White;
+    eColor mComputerColor = eColor::White;
     eColor mCurTurn = eColor::Black;
 
-    Goosebumps* mGoosebumps = nullptr;
+    Goosebumps* mComputer = nullptr;
 };
 
 extern Game* gGame;
