@@ -16,28 +16,26 @@ public:
     void Clear();
     void Update(const Vector2& pos);
 
-    const eSpotInfo(*GetSpotInfos() const)[Board::COLS][(uint32_t)eDirection::Count] { return mSpotInfos; }
+    inline const eSpotInfo(*GetSpotInfos() const)[Board::COLS][(uint32_t)eDirection::Count] { return mSpotInfos; }
 
-    const std::vector<Vector2> GetOverLineVect() const { return mOverLineVect; }
-    const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
-    const std::vector<Vector2> GetThreeAndThreeVect() const { return mThreeAndThreeVect; }
+    inline const std::vector<Vector2> GetOverLineVect() const { return mOverLineVect; }
+    inline const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
+    inline const std::vector<Vector2> GetThreeAndThreeVect() const { return mThreeAndThreeVect; }
 
-    const std::vector<Vector2>& GetSpotInfoVect(const eSpotInfo spotInfo) const { return mSpotInfoVectMap.at(GetSpotInfoHash(spotInfo)); }
+    inline const std::vector<Vector2>& GetSpotInfoVect(const eSpotInfo spotInfo) const { return mSpotInfoVectMap.at(GetSpotInfoHash(spotInfo)); }
 
 private:
-    void updateSpotInfoRecursive(const Vector2& pos, eColor(*board)[Board::COLS]);
     void updateIllegalMoveVect(const Vector2& pos);
     void removePosFromIllegalMove(const Vector2& pos);
     void addSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
     void removeSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
     
-    eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]) const;
+    eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]);
     Vector2 getEmptyPos(const Vector2& pos, const int32_t dx, const int32_t dy, const eColor(*board)[Board::COLS]) const;
 
     bool isOverLines(const Vector2& pos) const;
-    bool isFourAndFour(const Vector2& pos) const;
+    bool isFourAndFour(const Vector2& pos);
     bool isThreeAndThree(const Vector2& pos) const;
-    void recheckThreeAndThree(const Vector2& pos, eColor(*board)[Board::COLS]);
 
 private:
     Board* mBoard;

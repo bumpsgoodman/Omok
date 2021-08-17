@@ -5,7 +5,7 @@
 
 bool IsOpen(const eSpotInfo spotInfo)
 {
-    return (uint32_t)spotInfo % 2 == 0;
+    return (spotInfo != eSpotInfo::None && (uint32_t)spotInfo % 2 == 0);
 }
 
 uint32_t GetSpotInfoHash(const eSpotInfo spotInfo)

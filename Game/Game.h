@@ -36,9 +36,6 @@ private:
     Menu* mMenu = nullptr;
 
     eColor mPlayerColor = eColor::Black;
-    eColor mComputerColor = eColor::White;
-    eColor mCurTurn = eColor::Black;
-
     Goosebumps* mComputer = nullptr;
 };
 

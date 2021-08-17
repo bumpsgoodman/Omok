@@ -14,6 +14,8 @@ public:
     Goosebumps(const Goosebumps&) = delete;
     ~Goosebumps() = default;
 
+    inline eColor GetColor() const { return mColor; }
+
     Vector2 GetBestMovePos();
 
 private:
