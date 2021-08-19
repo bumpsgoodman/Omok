@@ -42,7 +42,7 @@ eSpotInfo operator+(const eSpotInfo spotInfo, const int32_t level)
 
 bool IsOpen(const eSpotInfo spotInfo)
 {
-    return (spotInfo >= eSpotInfo::Open1 && spotInfo <= eSpotInfo::Open6);
+    return (spotInfo >= eSpotInfo::Open1 && spotInfo <= eSpotInfo::Open4);
 }
 
 uint32_t GetSpotInfoHash(const eSpotInfo spotInfo)
@@ -66,6 +66,37 @@ eSpotInfo ReverseSpotInfo(const eSpotInfo spotInfo)
     }
     else
     {
+        return (eSpotInfo)((uint32_t)spotInfo + 4);
+    }
+}
+
+eSpotInfo OpenToClosed(const eSpotInfo spotInfo)
+{
+    if (IsOpen(spotInfo))
+    {
+        return (eSpotInfo)((uint32_t)spotInfo - 4);
+    }
+    else
+    {
+        return spotInfo;
+    }
+}
+
+eSpotInfo ClosedToOpen(const eSpotInfo spotInfo)
+{
+    if (IsOpen(spotInfo))
+    {
+        return spotInfo;
+    }
+    else
+    {
+        if (spotInfo == eSpotInfo::None
+            || spotInfo == eSpotInfo::Open5
+            || spotInfo == eSpotInfo::Open6)
+        {
+            return spotInfo;
+        }
+
         return (eSpotInfo)((uint32_t)spotInfo + 4);
     }
 }
