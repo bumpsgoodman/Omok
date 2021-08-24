@@ -17,6 +17,7 @@ public:
     void Update(const Vector2& pos);
 
     inline const eSpotInfo(*GetSpotInfos() const)[Board::COLS][(uint32_t)eDirection::Count] { return mSpotInfos; }
+    inline eSpotInfo GetSpotInfo(const Vector2& pos, const eDirection direction) const { return mSpotInfos[pos.Y][pos.X][(uint32_t)direction]; }
 
     inline const std::vector<Vector2> GetOverLineVect() const { return mOverLineVect; }
     inline const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
