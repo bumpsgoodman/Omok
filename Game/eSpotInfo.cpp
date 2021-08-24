@@ -149,6 +149,7 @@ eSpotInfo MakeSpotInfo(const uint32_t chainCount, const bool bOpen)
         return eSpotInfo::Open6;
     }
 
+    assert(chainCount >= 1 && chainCount <= 4);
     if (bOpen)
     {
         return (eSpotInfo)(chainCount + 4);

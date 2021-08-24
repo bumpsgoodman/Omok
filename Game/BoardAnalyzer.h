@@ -31,8 +31,6 @@ private:
     void removeSpotInfo(const eSpotInfo spotInfo, const Vector2& pos);
     
     eSpotInfo getSpotInfoRecursive(const Vector2& pos, const eDirection direction, eColor(*board)[Board::COLS]);
-    eSpotInfo getFinalResult(const Vector2& pos, const int32_t dx, const int32_t dy,
-        const eDirection dir, const eSpotInfo front, const eSpotInfo back, eColor(*board)[Board::COLS]);
     Vector2 getEmptyPos(const Vector2& pos, const int32_t dx, const int32_t dy, const eColor(*board)[Board::COLS]) const;
 
     bool isOverLines(const Vector2& pos) const;
