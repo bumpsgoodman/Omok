@@ -18,12 +18,11 @@ public:
 
     inline const eSpotInfo(*GetSpotInfos() const)[Board::COLS][(uint32_t)eDirection::Count] { return mSpotInfos; }
     inline eSpotInfo GetSpotInfo(const Vector2& pos, const eDirection direction) const { return mSpotInfos[pos.Y][pos.X][(uint32_t)direction]; }
+    inline const std::vector<Vector2>& GetSpotInfoVect(const eSpotInfo spotInfo) const { return mSpotInfoVectMap.at(GetSpotInfoHash(spotInfo)); }
 
     inline const std::vector<Vector2> GetOverLineVect() const { return mOverLineVect; }
     inline const std::vector<Vector2> GetFourAndFourVect() const { return mFourAndFourVect; }
     inline const std::vector<Vector2> GetThreeAndThreeVect() const { return mThreeAndThreeVect; }
-
-    inline const std::vector<Vector2>& GetSpotInfoVect(const eSpotInfo spotInfo) const { return mSpotInfoVectMap.at(GetSpotInfoHash(spotInfo)); }
 
 private:
     void updateIllegalMoveVect(const Vector2& pos);
