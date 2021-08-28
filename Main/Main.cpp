@@ -52,7 +52,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     gGame = new Game;
     if (!gGame->Initialize(g_hWnd))
     {
-        goto exit;
+        goto EXIT;
     }
 
     // Main message loop:
@@ -77,7 +77,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
-exit:
+EXIT:
     delete gGame;
     return (int) msg.wParam;
 }

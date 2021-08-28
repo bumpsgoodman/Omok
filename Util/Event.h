@@ -15,7 +15,7 @@ namespace event
     {
         void KeyDown(const uint8_t keyCode);
         void KeyUp(const uint8_t keyCode);
-        void Clear();
+        void Release();
         bool IsKeyPressed(const uint8_t keyCode);
     }
 }

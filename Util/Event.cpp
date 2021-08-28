@@ -55,7 +55,7 @@ namespace event
             sbKeyMap[keyCode] = false;
         }
 
-        void Clear()
+        void Release()
         {
             memset(sbKeyMap, false, sizeof(sbKeyMap));
         }

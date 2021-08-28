@@ -134,6 +134,39 @@ eSpotInfo MaxSpotInfo(const eSpotInfo spotInfo1, const eSpotInfo spotInfo2)
     }
 }
 
+eSpotInfo MinSpotInfo(const eSpotInfo spotInfo1, const eSpotInfo spotInfo2)
+{
+    uint32_t spot1 = (uint32_t)spotInfo1;
+    uint32_t spot2 = (uint32_t)spotInfo2;
+    bool bOpen1 = false;
+    bool bOpen2 = false;
+
+    if (IsOpen(spotInfo1))
+    {
+        spot1 -= 4;
+        bOpen1 = true;
+    }
+
+    if (IsOpen(spotInfo2))
+    {
+        spot2 -= 4;
+        bOpen2 = true;
+    }
+
+    if (spot1 == spot2)
+    {
+        return (!bOpen1) ? spotInfo1 : spotInfo2;
+    }
+    else if (spot1 < spot2)
+    {
+        return spotInfo1;
+    }
+    else
+    {
+        return spotInfo2;
+    }
+}
+
 eSpotInfo MakeSpotInfo(const uint32_t chainCount, const bool bOpen)
 {
     if (chainCount == 0)

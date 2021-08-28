@@ -26,4 +26,5 @@ eSpotInfo ReverseSpotInfo(const eSpotInfo spotInfo);
 eSpotInfo OpenToClosed(const eSpotInfo spotInfo);
 eSpotInfo ClosedToOpen(const eSpotInfo spotInfo);
 eSpotInfo MaxSpotInfo(const eSpotInfo spotInfo1, const eSpotInfo spotInfo2);
+eSpotInfo MinSpotInfo(const eSpotInfo spotInfo1, const eSpotInfo spotInfo2);
 eSpotInfo MakeSpotInfo(const uint32_t chainCount, const bool bOpen);
