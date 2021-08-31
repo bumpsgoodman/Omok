@@ -1,6 +1,8 @@
 #include <assert.h>
 #include <cstdint>
+#include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <vector>
 
 #include "Board.h"
@@ -18,6 +20,8 @@ Goosebumps::Goosebumps(Board* board, const eColor color)
 
     mAnalyzer = board->GetAnalyzer(color);
     mOpponentAnalyzer = board->GetAnalyzer(mOpponentColor);
+
+    srand((uint32_t)time(nullptr));
 }
 
 Vector2 Goosebumps::GetBestMovePos()
@@ -83,6 +87,7 @@ Vector2 Goosebumps::getForcedMovePos() const
         }
     }
 
+    /*
     // 상대방이 이기는 수
     {
         if (opponentOpen4Vect.size() > 0)
@@ -150,6 +155,7 @@ Vector2 Goosebumps::getForcedMovePos() const
             }
         }
     }
+    */
 
 EXIT:
     return result;
