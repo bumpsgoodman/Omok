@@ -1,0 +1,14 @@
+﻿  DDraw.cpp
+  Board.cpp
+  BoardAnalyzer.cpp
+  Button.cpp
+  eDirection.cpp
+  eSpotInfo.cpp
+  Game.cpp
+  Goosebumps.cpp
+C:\bumpsgoodman\Omok\Game\Goosebumps.cpp(169,1): warning C4102: 'EXIT': unreferenced label
+  Menu.cpp
+  Main.cpp
+  Event.cpp
+  Generating Code...
+  Omok.vcxproj -> C:\bumpsgoodman\Omok\Debug\Omok.exe

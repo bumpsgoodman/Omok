@@ -1,0 +1,16 @@
+﻿  DDraw.cpp
+  Board.cpp
+  BoardAnalyzer.cpp
+  Button.cpp
+  eDirection.cpp
+  eSpotInfo.cpp
+  Game.cpp
+  Goosebumps.cpp
+  Menu.cpp
+C:\bumpsgoodman\Omok\Game\Goosebumps.cpp(169,1): warning C4102: 'EXIT': unreferenced label
+  Main.cpp
+C:\bumpsgoodman\Omok\Main\Main.cpp(189,34): warning C4267: 'argument': conversion from 'size_t' to 'const uint32_t', possible loss of data
+C:\bumpsgoodman\Omok\Main\Main.cpp(189,31): warning C4267: 'argument': conversion from 'size_t' to 'const uint32_t', possible loss of data
+  Event.cpp
+  Generating Code...
+  Omok.vcxproj -> C:\bumpsgoodman\Omok\x64\Debug\Omok.exe
